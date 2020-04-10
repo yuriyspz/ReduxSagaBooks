@@ -35,7 +35,7 @@ function* watchCreateBook() {
 
 function* createBookAsync(action) {
     console.log(action)
-    const response = yield call(createBook, action.book.book)
+    const response = yield call(createBook, action.book)
     yield put({
         type: 'CREATE_BOOK',
         payload: {
@@ -56,8 +56,8 @@ function* watchDeleteBook() {
     yield takeEvery('DELETE_SINGLE_BOOK', deleteBookAsync);
 }
 
-function* deleteBookAsync() {
-    const response = yield call(deleteBook)
+function* deleteBookAsync(action) {
+    const response = yield call(deleteBook, action.id)
     yield put({
         type: 'DELETE_BOOK',
         id: response.id
@@ -77,8 +77,8 @@ function* watchUpdateBook() {
     yield takeEvery('UPDATE_SINGLE_BOOK', updateBookAsync);
 }
 
-function* updateBookAsync() {
-    const response = yield call(updateBook)
+function* updateBookAsync(action) {
+    const response = yield call(updateBook, action.id, action.book)
     yield put({
         type: 'UPDATE_BOOK',
         id: response.id,

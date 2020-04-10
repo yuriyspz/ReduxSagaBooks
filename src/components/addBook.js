@@ -82,7 +82,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onAddBook: (book) => {
             console.log(book);
-            dispatch({type:'CREATE_SINGLE_BOOK', book: {book},});
+            dispatch({type:'CREATE_SINGLE_BOOK', book: book});
         }
     }
 };

@@ -125,10 +125,10 @@ const ButtonClose = styled.button`
 const mapDispatchToProps = (dispatch) => {
     return {
         onUpdateBook: (id, book) => {
-            dispatch({type:'UPDATE_SINGLE_BOOK', id, book});
+            dispatch({type:'UPDATE_SINGLE_BOOK', id: id, book: book});
         },
         onDeleteBook: (id)=>{
-            dispatch({type:'DELETE_SINGLE_BOOK', id});
+            dispatch({type:'DELETE_SINGLE_BOOK', id: id});
         }
     }
 };
