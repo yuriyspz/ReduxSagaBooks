@@ -18,7 +18,7 @@ class BookList extends React.Component {
         return (
             <Container>
                 <button onClick={this.props.getBooks}>Show book list</button>
-                <ul className="list">
+                <Books>
                     {
                         this.props.books.map((item, index) =>
                             <SingleBook key={index} book={item}>
@@ -26,7 +26,7 @@ class BookList extends React.Component {
                             </SingleBook>
                         )
                     }
-                </ul>
+                </Books>
             </Container>
         );
     }
@@ -39,11 +39,14 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 `;
-const ListElement = styled.li`
-	font-size: 24px;
-	font-weight: 500;
-	color: palevioletred;
+const Books = styled.div`
+	max-width: 1140px;
+	margin: 0 auto;
+	display : flex;
+	justify-content: center;
+	flex-wrap: wrap;
 `;
+
 const mapStateToProps = (state) => {
     return {
         books: state.book

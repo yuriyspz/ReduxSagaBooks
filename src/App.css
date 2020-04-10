@@ -72,3 +72,6 @@ i{
 .book-element:hover{
   background: #61dafb;
 }
+*{
+  box-sizing: border-box;
+}
