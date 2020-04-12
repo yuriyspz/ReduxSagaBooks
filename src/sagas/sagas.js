@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {call, put, takeEvery, takeLatest, all} from 'redux-saga/effects'
+import {call, put, takeEvery, all} from 'redux-saga/effects'
 
 const url = `https://spring-boot-mysql-server-part0.herokuapp.com/api/books`;
 

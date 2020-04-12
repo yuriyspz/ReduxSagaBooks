@@ -1,18 +1,17 @@
 import React from 'react'
-import {getAllBooksSuccess} from "../actions";
 import {connect} from "react-redux";
 import styled from 'styled-components';
 import SingleBook from "./singleBook";
 
 class BookList extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-    // componentDidMount() {
-    //     this.props.getBooks();
+    // constructor(props) {
+    //     super(props);
     // }
+    //
+    // // componentDidMount() {
+    // //     this.props.getBooks();
+    // // }
 
     render() {
         return (

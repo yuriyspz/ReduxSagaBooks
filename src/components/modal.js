@@ -1,5 +1,4 @@
 import React from 'react'
-import {createBook, deleteBook, updateBook} from "../actions";
 import {connect} from "react-redux";
 import styled from "styled-components";
 import fieldComponent from "./fieldComponent";
@@ -7,16 +6,16 @@ import {Field, reduxForm} from "redux-form";
 
 class Modal extends React.Component {
 
-    constructor(props) {
-        super(props);
-        // this.state = {
-        //     title: this.props.book.title,
-        //     author: this.props.book.author,
-        //     description: this.props.book.description,
-        //     published: this.props.book.published,
-        //     id: this.props.book.id
-        // };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     // this.state = {
+    //     //     title: this.props.book.title,
+    //     //     author: this.props.book.author,
+    //     //     description: this.props.book.description,
+    //     //     published: this.props.book.published,
+    //     //     id: this.props.book.id
+    //     // };
+    // }
 
     handleDelete = e=>{
         this.props.onDeleteBook(this.props.book.id);

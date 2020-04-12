@@ -19,8 +19,8 @@ class SingleBook extends React.Component {
 
     render() {
         return (
-            <BookItem>
-                <div onClick={this.showModal} className={'book-element'}>
+            <BookItem className={'book-element'}>
+                <div onClick={this.showModal}>
                     <div>Название: {this.props.book.title}</div>
                     <div>Автор: {this.props.book.author}</div>
                     <div>Описание: {this.props.book.description}</div>
